@@ -1,0 +1,126 @@
+<div class="my-experience-container">
+    <div class="weui-top-bar">
+        <div class="weui-cells" style="width: 100%;margin-top: 0px">
+            <div class="header">
+                <div class="left_icon">
+                    <a ng-click="mer.goBack()">
+                        <img src="./assets/images/black/fanhui.png" width="9px">
+                    </a>
+                </div>
+                <div class="label" style="">我的会员等级</div>
+                <div class="right_icon">
+                    <!--<a class="weui-vcode-btn weui-btn_danger" ng-click="mrc.pay()" style="color:black">支付</a>-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page">
+        <div class="page__bd" style="height: 100%;">
+            <div class="weui-tab__panel">
+                <div class="weui-panel top-panel" id="headerImg">
+
+                    <div class="weui-cells" style="background: transparent">
+                        <div class="weui-cell">
+                            <div class="weui-cell__bd" style="color: white">我的等级:</div>
+                        </div>
+                        <div class="weui-cell my-cell">
+                            <div class="my-border" style="font-size: 23px">
+                                <div class="weui-cell__bd " style="color: white">{{mer.levelName}}</div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="weui-cells" style="background: transparent;bottom: 1vh">
+                        <div class="weui-cell">
+                            <div class="weui-cell__bd" style="color: white">累计积分:</div>
+                        </div>
+                        <div class="weui-cell my-cell">
+                            <div class="my-border">
+                                <div class="weui-cell__bd " style="color: white">{{mer.experience}}</div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="lineBG" id="lineBG">
+                        <div class="oneqi"></div>
+                        <div class="twoqi"></div>
+                        <div class="linebg2"></div>
+                        <div class="line" id="line"></div>
+
+                        <div class="pcImg" id="pcImg"></div>
+
+                        <div class="mcenter-info-bottom" style="display: inline-block">
+                            <div class="mcenter-info-listone">
+                                <h2>{{mer.leve[0].lowerLimit}}</h2>
+
+
+                            </div>
+                            <div class="mcenter-info-listtwo">
+                                <h2>{{mer.leve[1].lowerLimit}}</h2>
+                                <span>白银卡</span>
+                            </div>
+                            <div class="mcenter-info-listthree" >
+                                <h2>{{mer.leve[2].lowerLimit}}</h2>
+                                <span>黑金卡</span>
+                            </div>
+                            <div class="mcenter-info-listfour" >
+                                <h2>∞</h2>
+
+                            </div>
+                        </div>
+
+                        <div style="color: white; margin-top: -1.5vh">{{mer.option}}</div>
+                    </div>
+
+
+                    <!--<div style="margin-top: 1vh">-->
+                    <!--<img style="width: 24px;height: 18px" src="./assets/images/newHey/img02.png.png">-->
+                    <!--</div>-->
+
+
+                </div>
+
+                <div  style="text-align: right; margin: 20px 20px 0px 10px">{{mer.timeStr}}</div>
+
+
+                <div class="no-border weui-panel" style="text-align: center; margin: 20px 10px 0px 10px">累计积分获取记录</div>
+
+                <!--<div class="bottom-box" id = "bottom-box" style="overflow: scroll; height: 100%; margin: 0 20px; background-image: url(./assets/images/newHey/point4.jpg) ">-->
+
+                    <!--<div class="weui-panel bottom-panel" style="; background: transparent;height: 85px" ng-repeat="each in mer.pointsRecords">-->
+                        <!--<div style="height: 15px;background-color: white"></div>-->
+                        <!--<div class="weui-cells  " style="background: transparent;height: 70px" >-->
+
+                            <!--<div class="weui-cell" >-->
+                                <!--<div  style="height: 70px;margin-top: 0px">-->
+                                <!--<div class="weui-cell__hd"><label class="weui-label"  style="width: 100%;height: 25px;margin-top: 0px; color: white;">{{each.storeName}}</label></div>-->
+                                <!--<div class="weui-cell__hd"><label class="weui-label"  style="width: 100%;height: 35px;color: white">{{each.created}}</label></div>-->
+                                    <!--</div>-->
+                                <!--<div class="weui-cell__ft" style="color: white">{{each.point}}</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+                <div style="overflow: scroll; height: 90%;padding-bottom: 10px;">
+                    <div class="weui-panel" style="margin-top: 10px" ng-repeat="each in mer.pointsRecords">
+                        <div class="weui-cells">
+                            <div class="weui-cell recordbg" style="height: 40px" >
+                                <div class="recordSon" >
+                                <div class="weui-cell__hd" style="height: 25px;line-height: 25px" ><label class="weui-label" style="width: 100%">{{each.storeName}}</label></div>
+                                <div class="weui-cell__hd" style="height: 25px;line-height: 25px"><label class="weui-label" style="width: 100%">{{each.created}}</label></div>
+                                    </div>
+                                <div class="weui-cell__ft" style="color: black">{{each.point}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

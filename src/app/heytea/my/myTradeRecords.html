@@ -1,0 +1,63 @@
+<div class="trade-record-container-heytea">
+    <div class="weui-top-bar">
+        <div class="weui-cells" style="width: 100%;margin-top: 0px">
+            <div class="header">
+                <div class="left_icon" style="top:15px">
+                    <a ng-click="tc.goBack()">
+                        <img src="./assets/images/black/fanhui.png" width="9px">
+                    </a>
+                </div>
+                <div class="label" style="">消费记录</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page" style="top:44px;">
+        <div class="page__bd" style="height: 100%;">
+            <div class="weui-tab__panel">
+                <div class="img">
+                    <img src="./assets/images/heytea/trade.png"/>
+                </div>
+                <div class="middle-line" ng-if="tc.list.length>0"></div>
+                <div class="list">
+                    <div class="item" ng-repeat="t in tc.list">
+                        <div class="left">
+                            <div class="position"></div>
+                            <div class="location">
+                                <div class="name">{{t.storeName}}</div>
+                                <div class="date">{{t.date}}</div>
+                                <div class="time">{{t.time}}</div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="line"></div>
+                            <div class="content">
+                                <div class="total">消费金额：{{t.total}}</div>
+                                <div class="detail">
+                                    <div class="type">消费方式：</div>
+                                    <div class="detail-list">
+                                        <div ng-if="t.alipayAmount!=0">支付宝{{t.alipayAmount}}</div>
+                                        <div ng-if="t.amount!=0">会员卡{{t.amount}}</div>
+                                        <div ng-if="t.cashAmount!=0">现金{{t.cashAmount}}</div>
+                                        <div ng-if="t.creditAmount!=0">银联卡{{t.creditAmount}}</div>
+                                        <div ng-if="t.qqpayAmount!=0">QQ支付{{t.qqpayAmount}}</div>
+                                        <div ng-if="t.weixinAmount!=0">微信{{t.weixinAmount}}</div>
+                                    </div>
+                                </div>
+                                <div class="detail-last">
+                                    <div class="type-d">消费详情：</div>
+                                    <div class="d-list">
+                                        <div ng-repeat="gift in t.gifts">
+                                            <span>{{gift}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
